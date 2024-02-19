@@ -1,0 +1,65 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+
+     
+     <section class="page-title" style="background-image:url({% static 'home/images/background/6.jpg' %});">
+        <div class="auto-container">
+            <h1>Directions et services rattachés au Cabinet</h1>
+        </div>
+    </section>
+    <!--
+    <section class="page-info">
+        <div class="auto-container">
+        	<div class="inner-container clearfix">
+            
+                <div class="pull-left">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">Accueil</a></li>
+                        <li>Directions et services rattachés au Cabinet</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    -->
+    
+    <!--Info Section-->
+    <section class="blog-grid-section">
+        <div class="auto-container">            
+            <div class="row clearfix equal-cols">               
+                <!--News Block-->
+                <!--Welcome Block-->
+                {% for d in directions %}
+                <div class="services-block col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <div class="icon-box">
+                                    <span class="icon flaticon-teacher"></span>
+                                </div>
+                                <h3>{{ d.direction }}</h3>
+                                <div class="text">{{ d.titre }}</div>
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="icon-box">
+                                            <span class="icon flaticon-teacher"></span>
+                                        </div>
+                                        <div class="text">{{ d.description | safe }}</div>
+                                        <a class="read-more" href="{% url 'detail-direction' d.slug %}">Lire plus</a>
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                {% endfor %}
+                <!-- End Welcome Block -->
+            </div>
+        </div>
+
+    </section>
+    
+    <br>
+
+{% endblock %}

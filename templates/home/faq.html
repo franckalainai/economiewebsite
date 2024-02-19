@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+
+     <section class="page-title" style="background-image:url({% static 'home/images/background/6.jpg' %});">
+        <div class="auto-container">
+            <h1>Foire aux questions</h1>
+        </div>
+    </section>
+    <!--
+    <section class="page-info">
+        <div class="auto-container">
+        	<div class="inner-container clearfix">
+            
+                <div class="pull-left">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">Accueil</a></li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    -->
+    <!--End Page Info-->
+    <section class="faq-section style-two">
+    	<div class="auto-container">
+            {% for f in faqs %}
+            <ul class="accordion-box style-five">
+                <!--Block-->
+                <li class="accordion block">
+                    <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-plus"></span> <span class="icon flaticon-minus flaticon-line"></span></div>{{ f.question }}</div>
+                    <div class="acc-content">
+                        <div class="content">
+                            <div class="text">
+                                <p>{{ f.reponse }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            {% endfor %}
+            
+        </div>
+    </section>
+    
+
+{% endblock %}

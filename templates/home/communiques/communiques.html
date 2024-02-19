@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-info " style="background-color:whitesmoke;" >
+    <div class="auto-container" >
+        <div class="inner-container clearfix">
+        
+            <div class="pull-left">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">Accueil</a></li>
+                    <li><a href="{% url 'documents' %}}" target="_blank">Communiques</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-page-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            
+            <!--News Block Two-->
+
+
+            {% for c in communiques %}
+            <div class="news-block-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="lower-content">
+                        <div class="content">
+                            <div class="icon-box" style="border:2px solid var(--primary-one);"><span class="icon flaticon-pdf"></span></div>
+                            <h3><a href="{% url 'communiques' %}">Communiqué</a></h3>
+                            <div class="text">{{ c.titre }}</div>
+                            <a href="{{ c.pdf.url }}" class="read-more" target="_blank"><h6>Télécharger</h6></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}

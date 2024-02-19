@@ -1,0 +1,44 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-info " style="background-color:whitesmoke;" >
+    <div class="auto-container" >
+        <div class="inner-container clearfix">
+        
+            <div class="pull-left">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">Accueil</a></li>
+                    <li><a href="{% url 'documents' %}"> Documents</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq-section style-two" style="background-color:whitesmoke;" >
+    <div class="content_global page">
+    <div class="content_zone">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 style="text-align: center;"><b>Documents Budgétaires / Etat d'éxecution du budget</b></h3>
+                    <br>
+                    <br>
+                    <div class="doc" >
+                        <ul> 
+                            {% for e in eBudgets %}                                                  
+                                <li style="padding: 0.3rem;">
+                                    <i class="fa fa-file-pdf-o" style= "color: red; font-size: 25px; border-bottom: grey 2px ;"></i>
+                                    <a class="doc-link" href="{{ e.pdf.url }}" target="_blank">{{ e.titre }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+{% endblock %}

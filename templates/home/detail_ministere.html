@@ -1,0 +1,236 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+<section class="page-title" style="background-image:url({% static 'home/images/background/6.jpg' %});">
+    <div class="auto-container">
+        <h1>Ministère de l'Emploi et de la Protection Sociale</h1>
+    </div>
+  </section>
+<!--
+<section class="page-info">
+    <div class="auto-container">
+        <div class="inner-container clearfix">
+        
+            <div class="pull-left">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="/">Accueil</a></li>
+                    <li>Ministère de l'Emploi et de la Protection Sociale</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+-->
+<!--End Page Info-->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+            
+            <!--Content Side / Blog Single-->
+            <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <div class="blog-single">
+                    <div class="inner-box">
+                        <!--
+                        <ul class="post-info">
+                            <li>January 19, 2017</li>
+                            <li>Posted by: Stephen Adams</li>
+                            <li>Category: Business Plan</li>
+                        </ul>
+                        -->
+                        <div class="lower-content">
+                            <h3>{{blog_obj.titre}}</h3>
+                            <div class="text">
+                                <p>{{blog_obj.description|safe}}</p>
+                                <div class="row clearfix">
+                                    <!--Image Column-->
+                                    <div class="image-column col-md-5 col-sm-5 col-xs-12">
+                                        <div class="image">
+                                            <img src="images/resource/quote-image.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Sidebar-->
+            {% include 'home/sidebar.html' %}
+        </div>
+    </div>
+</div>
+
+<!--Featured Services-->
+<section class="featured-services" style="margin-top: -100px;">
+    <div class="auto-container">
+        <div class="row clearfix">
+            
+            <!--Feature Block-->
+            <div class="feature-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <a href="https://meps.projectperforming.com/detail-biographie/maitre-adama-kamara"><img src="{% static 'home/images/resource/images_adam.jpg' %}" alt="" /></a>
+                    </div>
+                    <div class="lower-content">
+                        <h3><a href="https://meps.projectperforming.com/detail-biographie/maitre-adama-kamara">Le Ministre</a></h3>
+                      
+                        <div class="text"><h6>Maitre Adama Kamara</h6></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Feature Block-->
+            <div class="feature-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <a href="http://dev-meps-01.eastus.cloudapp.azure.com/accueil-dge" ><img src="{% static 'home/images/resource/dge_logo.jpg' %}" alt="" /></a>
+                    </div>
+                    
+                    <div class="lower-content">
+                        <h3><a href="http://dev-meps-01.eastus.cloudapp.azure.com/accueil-dge" >DGE</a></h3>
+                       
+                        <div class="text" ><h6>Direction Générale de l'Emploi.</h6></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Feature Block-->
+            <div class="feature-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <a href="http://dev-meps-01.eastus.cloudapp.azure.com/accueil-dgt" ><img src="{% static 'home/images/resource/dgt_logo.jpg' %}" alt="" /></a>
+                    </div>
+                    <div class="lower-content">
+                        <h3><a href="http://dev-meps-01.eastus.cloudapp.azure.com/accueil-dgt" >DGT</a></h3>
+                        <div class="text"><h6>Direction Générale du Travail.</h6></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Feature Block-->
+            <div class="feature-block col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <a href="http://dev-meps-01.eastus.cloudapp.azure.com/accueil-dgps" ><img src="{% static 'home/images/resource/dgps_logo.jpg' %}" alt="" /></a>
+                    </div>
+                    <div class="lower-content">
+                        <h3><a href="http://dev-meps-01.eastus.cloudapp.azure.com/accueil-dgps" >DGPS</a></h3>
+                        <div class="text"><h6>Direction Générale de la Protection Sociale.</h6></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!--End Featured Services-->
+
+<!--Approach Section-->
+<section class="approach-section grey-bg">
+    <div class="auto-container">
+        <!--Sec Title-->
+        <div class="sec-title">
+            <h2>Historique</h2>
+        </div>
+        <div class="four-item-carousel owl-carousel owl-theme">
+            <!--Featured Block Three-->
+            <div class="featured-block-three">
+                <div class="inner-box">
+                    <!--<div class="icon-box">
+                        <span class="icon flaticon-donation"></span>
+                    </div>-->
+                    <div class="image">
+                        <a href="#"><img src="{% static 'home/images/resource/photo-officiel-A.KAMARA.jpg' %}" alt="" /></a>
+                    </div>
+                    <h3><a href="#">Me. Adama Kamara</a></h3>
+                    <div class="title">Depuis Avril 2021</div>
+                    <div class="overlay-box">
+                        <div class="large-icon">
+                            <!--<span class="icon flaticon-donation"></span>-->
+                        </div>
+                        <h3><a href="#">Me. Adama KAMARA</a></h3>
+                        <div class="overlay-title">Actuel Ministre</div>
+                        <div class="text"><h5>Nommé Ministre de l’emploi et de la protection sociale depuis le 6 avril 2021, monsieur Adama KAMARA est un avocat qui a occupé de hautes fonctions au sein de l’administration publique ivoirienne.</h5></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Featured Block Three-->
+            <div class="featured-block-three">
+                <div class="inner-box">
+                    <!--<div class="icon-box">
+                        <span class="icon flaticon-factory"></span>
+                    </div>-->
+                    <div class="image">
+                        <a href="#"><img src="{% static 'home/images/resource/photo-officiel-abina.jpg' %}" alt="" /></a>
+                    </div>
+                    <h3><a href="#">ABINAN K. Pascal</a></h3>
+                    <div class="title">Juil 2018 - Avr 2021</div>
+                    <div class="overlay-box">
+                        <div class="large-icon">
+                            <!--<span class="icon flaticon-factory"></span>-->
+                        </div>
+                        <h3><a href="#">ABINAN K. Pascal</a></h3>
+                        <div class="overlay-title">Ancien Ministre</div>
+                        <div class="text"><h5>Nommé le 10 juillet 2018, Ministre de l’emploi et de protection sociale 2018. Monsieur Abinan Pascal KOUAKOU est haut cadre de l’administration publique ivoirienne.
+
+                            Sa Fonction au sein de ce ministère a pris fin le 06 avril 2021.</h5></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Featured Block Three-->
+            <div class="featured-block-three">
+                <div class="inner-box">
+                    <!--<div class="icon-box">
+                        <span class="icon flaticon-medical-kit-bag"></span>
+                    </div>-->
+                    <div class="image">
+                        <a href="#"><img src="{% static 'home/images/resource/photo-officiel-JK.jpg' %}" alt="" /></a>
+                    </div>
+                    <h3><a href="#">Jean-Claude KOUASSI</a></h3>
+                    <div class="title">Janv 2017 - Juil 2018.</div>
+                    <div class="overlay-box">
+                        <div class="large-icon">
+                            <!--<span class="icon flaticon-medical-kit-bag"></span>-->
+                        </div>
+                        <h3><a href="#">Jean-Claude KOUASSI</a></h3>
+                        <div class="overlay-title">Ancien Ministre</div>
+                        <div class="text"><h5>Monsieur Jean-Claude KOUASSI nommé Ministre de l’emploi et de la protection sociale du 11 janvier 2017 au 10 juillet 2018.</h5></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Featured Block Three-->
+            <div class="featured-block-three">
+                <div class="inner-box">
+                    <!--<div class="icon-box">
+                        <span class="icon flaticon-school-bus"></span>
+                    </div>-->
+                    <div class="image">
+                        <a href="#"><img src="{% static 'home/images/resource/2088_dosso.jpg' %}" alt="" /></a>
+                    </div>
+                    <h3><a href="#">Moussa DOSSO</a></h3>
+                    <div class="title">Janv 2016 - Janv 2017</div>
+                    <div class="overlay-box">
+                        <div class="large-icon">
+                            <!--<span class="icon flaticon-school-bus"></span>-->
+                        </div>
+                        <h3><a href="#">Moussa DOSSO</a></h3>
+                        <div class="overlay-title">Ancien Ministre</div>
+                        <div class="text"><h5>Monsieur Moussa DOSSO nommé Ministre de l’emploi et de la protection sociale
+                            de 13/01/2016 au 11/01/2017.</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

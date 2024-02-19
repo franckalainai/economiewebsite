@@ -1,0 +1,192 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+
+<section class="page-title" style="background-image:url({% static 'home/images/background/6.jpg' %});">
+    <div class="auto-container">
+        <h1>{{blog_obj.titre}}</h1>
+    </div>
+</section>
+
+<!--Page Info
+<section class="page-info">
+    <div class="auto-container">
+        <div class="inner-container clearfix">
+        
+            <div class="pull-left">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Directions rattachées au cabinet</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+-->
+<!--End Page Info-->
+
+<!--Sidebar Page Container-->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+            
+            <!--Content Side / Blog Single-->
+            <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <div class="blog-single">
+                    <div class="inner-box">
+                        <div class="image">
+                            <img src="/media/{{blog_obj.image}}" alt="" />
+                        </div>
+                        <!--
+                        <ul class="post-info">
+                            <li>January 19, 2017</li>
+                            <li>Posted by: Stephen Adams</li>
+                            <li>Category: Business Plan</li>
+                        </ul>
+                        -->
+                        <div class="lower-content">
+                            <h3>{{blog_obj.titre}}</h3>
+                            <div class="text">
+                                <p>{{blog_obj.presentation|safe}}</p>
+                                <div class="row clearfix">
+                                    <!--Image Column-->
+                                    <div class="image-column col-md-5 col-sm-5 col-xs-12">
+                                        <div class="image">
+                                            <img src="images/resource/quote-image.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--post-share-options
+                            <div class="post-share-options clearfix">
+                                <div class="pull-left tags"><span>Tags: </span><a href="#">Consulting</a>, <a href="#">Business</a>, <a href="#">Seminar</a></div>
+                                <ul class="pull-right social-icon-three clearfix">
+                                    <li class="share"><span class="fa fa-share-alt"></span>&nbsp; Share :</li>
+                                    <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                            -->
+                            
+                            <!--Author Box
+                            <div class="author-box">
+                                <h2>About Author</h2>
+                                <div class="author-comment">
+                                    <div class="inner-box">
+                                        <div class="image"><img src="images/resource/author-2.jpg" alt="" /></div>
+                                        <h3>Mark Richardson</h3>
+                                        <div class="text">Give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, installations are becoming more importants, but if current installations are becoming but if current prefabrication the master-builder of human happiness.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Sidebar-->
+            <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                <aside class="sidebar">
+                    
+                    <!-- Search Form 
+                    <div class="sidebar-widget search-box">
+                        <form method="post" action="contact.html">
+                            <div class="form-group">
+                                <input type="search" name="search-field" value="" placeholder="Search.." required>
+                                <button type="submit"><span class="icon fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </div>
+                    -->
+                    <!--Blog Category Widget-->
+                    <div class="sidebar-widget sidebar-blog-category">
+                        <div class="sidebar-title">
+                        </div>
+                        <ul class="blog-cat">
+                            {% for category, directions in categorys.items %}
+                              <li>
+                                {{category.name}}
+                                {% for emp in directions %}
+                                  <ul>
+                                    <li>
+                                      <a href="{% url 'detail-direction' emp.slug %}">{{emp.titre}}</a>
+                                    </li>
+                                  </ul>
+                                {% endfor %}
+                              <li>
+                            {% endfor %}
+                          </ul>
+                    </div>
+
+                    <!-- Popular Posts 
+                    <div class="sidebar-widget popular-posts">
+                        <div class="sidebar-title"><h2>Popular Post</h2></div>
+
+                        <article class="post">
+                            <figure class="post-thumb"><a href="blog-single.html"><img src="images/resource/post-thumb-1.jpg" alt=""></a></figure>
+                            <div class="text"><a href="blog-single.html">Finance & legal throughout project.</a></div>
+                            <div class="post-info">January 19, 2017</div>
+                        </article>
+                        
+                        <article class="post">
+                            <figure class="post-thumb"><a href="blog-single.html"><img src="images/resource/post-thumb-2.jpg" alt=""></a></figure>
+                            <div class="text"><a href="blog-single.html">What makes us best in the world?</a></div>
+                            <div class="post-info">December 05, 2016</div>
+                        </article>
+                        
+                        <article class="post">
+                            <figure class="post-thumb"><a href="blog-single.html"><img src="images/resource/post-thumb-3.jpg" alt=""></a></figure>
+                            <div class="text"><a href="blog-single.html">Why People go with Consulthub.</a></div>
+                            <div class="post-info">August 21, 2016</div>
+                        </article>
+                        
+                    </div>
+                    -->
+                    
+                    <!-- Gallery Widget
+                    <div class="sidebar-widget gallery-widget">
+                        <div class="sidebar-title">
+                            <h2>Instagram</h2>
+                        </div>
+                        <div class="clearfix">
+                            <figure class="image"><a href="images/gallery/gallery-1.jpg" class="lightbox-image"><img src="images/resource/sidebar-gallery-1.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="images/gallery/gallery-2.jpg" class="lightbox-image"><img src="images/resource/sidebar-gallery-2.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="images/gallery/gallery-3.jpg" class="lightbox-image"><img src="images/resource/sidebar-gallery-3.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="images/gallery/gallery-4.jpg" class="lightbox-image"><img src="images/resource/sidebar-gallery-4.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="images/gallery/gallery-5.jpg" class="lightbox-image"><img src="images/resource/sidebar-gallery-5.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="images/gallery/gallery-6.jpg" class="lightbox-image"><img src="images/resource/sidebar-gallery-6.jpg" alt=""></a></figure>
+                        </div>
+                    </div>
+                    -->
+                    
+                    <!-- Popular Tags 
+                    <div class="sidebar-widget popular-tags">
+                        <div class="sidebar-title"><h2>Tag Cloud</h2></div>
+                        <a href="#">Book</a>
+                        <a href="#">Company</a>
+                        <a href="#">Ideas</a>
+                        <a href="#">Energy</a>
+                        <a href="#">Engines</a>
+                        <a href="#">Chemical</a>
+                        <a href="#">Industry</a>
+                        <a href="#">Research</a>
+                    </div>
+                    -->
+                </aside>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!--End Blog Grid Section-->
+
+
+{% endblock %}

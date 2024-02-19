@@ -1,0 +1,314 @@
+{% load static %}
+<!-- Main Header-->
+<header class="main-header">
+
+    
+    <div class="header-top">
+        <div class="auto-container">
+            <div class="row clearfix fullWidth">
+                <!--Top Left-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="top-left col-lg-3 col-md-3 col-sm-2 col-xs-12 ">
+                            <ul class="top-links row clearfix contacts-info">
+                                <!-- <li><span class="icon theme_color flaticon-maps-and-flags"></span>Abidjan –Plateau,Tour A, cité administrative, Abidjan ,12e Etage.</li> -->
+                                <li><span class="icon theme_color flaticon-telephone"></span> <a href="tel:+22520239280">+225 27 20 23 92 80</a></li>
+                                <li><span class="icon theme_color flaticon-e-mail-envelope"></span> info@emploi.gouv.ci</li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-md-6 col-sm-12 col-xl-12" >
+                            <div class="row clearfix flash-info">
+                                <div  id="flashInfoTitle" class="col-md-2 col-sm-12 col-xl-12 ">
+                                    <span class="flash-info-title">À LA UNE</span>
+                                </div>
+                                <div class="col-md-10 col-sm-12 col-xl-12" >
+                                    <blink>
+                                        <marquee class="flash-info-content" behavior="scroll" scrollamount="5" duration="20" direction="LEFT" loop="infinite">
+                                            {% for ac in actuhome %}
+                                                <span class="flash-info-item"><a style="color:#FFF;" href="{% url 'blog_detail' ac.slug %}">{{ ac.titre }}</a></span>
+                                            {% endfor %}
+                                        </marquee>
+                                    </blink>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-right col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    
+                            <ul class="social-links">
+                                <li></li>
+                                <li></li>
+                                <li><a href='https://web.facebook.com/profile.php?id=100063663162120' target="_blank"><span class="fa fa-facebook-f"></span></a></li>
+                                <li><a href='https://twitter.com/mepsci?lang=en' target="_blank"><span class="fa fa-twitter"></span></a></li>
+                                
+                            </ul>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--Top Right-->
+        </div>
+    </div>
+    
+    
+    <div class="header-upper">
+        <div class="row clearfix " >
+            <!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 header-upper-first">
+                <div class="row clearfix item-parent">
+                    <div class="logo logo-img-meps col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <a href="{% url 'home'  %} ">
+                            <img src="{% static 'home/images/logo/logo.png' %}" alt="logo du MEPS" title=""  />
+                        </a>
+                    </div>
+    
+                    <!-- <div class="logo-text col-lg-1 col-md-1 col-sm-1"></div> -->
+                    <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-12 align-left">
+                            <a href="{% url 'home'  %}"><strong>
+                            <span class="v-centered-b">Ministère de l'Emploi</span>
+                            <span class="v-centered-b"><br><br> et de la Protection Sociale</span></strong>
+                            </a>
+                    </div>
+                    <!-- <div class=" bottom-line"></div> -->
+    
+                </div>
+            </div>
+    
+            <div class="col-lg-6 col-md-6 col-sm-6 header-upper-second">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="">
+                                    <img src="{% static 'home/images/produits/regime.png' %}">
+                                </a>
+                            </div>
+                            <div class="col-md-4" style="text-align: center;">
+                                <a href="">
+                                    <img src="{% static 'home/images/produits/cnam.png' %}">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="">
+                                    <img src="{% static 'home/images/produits/complementaire.png' %}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                
+            </div>
+    
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 header-upper-third">
+                <div class="row clearfix item-parent">
+    
+                    <div class=" logo logo-img-embleme col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+                        <img src="{% static 'home/images/logo/armoirie.png' %}" alt="embleme de la cote d'Ivoire">
+                    </div>
+    
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 align-right">
+                        <small class="v-centered-b"><strong>RÉPUBLIQUE DE CÔTE D'IVOIRE</strong></small>
+                        <small class="v-centered-b"><br><br>Union - Discipline - Travail</small>
+                        <hr width="75">
+                    </div>
+    
+                    <div class="col-lg-2 col-md-2 col-sm-2"></div>
+    
+                    
+                </div>
+            <!-- <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix">            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-links-bloc">
+                <!-- <div class="upper-right"> -->
+    
+                <div class="nav-outer clearfix">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    
+                        <div class="navbar-collapse collapse">
+                            <ul class="navigation clearfix">
+                                <li class=""><a href="{% url 'home' %}">ACCUEIL</a></li>
+                                <li class="dropdown"><a href="#">MEPS</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-ministere/a-propos-du-ministere-de-lEmploi-et-de-la-protection-sociale">Le Ministère</a></li>
+                                        <li class=""><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-cabinet/le-cabinet">Le Cabinet</a> </li>
+                                        <li class=""><a href="{% url 'orga' %}">Organigramme</a></li>
+                                        <li><a href="{% url 'homedirection' %}">Directions & Services Rattachées</a></li>
+                                        <li><a href="{% url 'structures-sous-tutelles' %}">Structures Sous Tutelles</a></li>
+                                        <li><a href="{% url 'ecoles-speciales' %}">Écoles Spécialisées</a></li>
+                                        <li><a href="{% url 'decret-organisation' %}">Décret d'Organisation</a></li>
+                                        <li><a href="{{ 'http://dev-meps-01.eastus.cloudapp.azure.com/detail-mission/missions-et-objectifs' }}">Missions & Objectifs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">DIRECTIONS GÉNÉRALES</a>
+                                    <ul class="dropdown-menu">
+                                        <li class=""><a href="{% url 'homedge' %}">De l'Emploi [DGE]</a></li>
+                                        <li class=""><a href="{% url 'homedgt' %}">Du Travail [DGT]</a></li>
+                                        <li class=""><a href="{% url 'homedgps' %}">De la Protection Sociale [DGPS]</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">REGIMES</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown"><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-produit/couverture-maladie-universelle">CMU</a>
+                                            <ul>
+                                                <li><a href="https://meps.projectperforming.com/detail-produit/liste-des-pieces-a-fournir-cmu">Pièces à fournir</a></li>
+                                                <li><a href="{% url 'centrecmu' %}">Centres d'enrôlement CMU</a></li>
+                                                <li><a href="{% url 'reseauxsoins' %}">Réseaux de soins</a></li>
+                                                <li><a href="{% url 'medicamentscmu' %}">Liste des médicaments</a></li>
+                                            </ul>
+                                        <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+                                        <li><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-produit/la-complementaire">COMPLEMENTAIRE</a></li>
+                                        <li><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-produit/regime-social-des-travailleurs-independants">RSTI</a> </li>
+         
+                                    </ul>
+                                </li>
+                                <li class=""><a href="{% url 'documents' %}">DOCUMENTS</a>               
+                                </li>
+                                <li class="dropdown"><a href="">PUBLICATIONS</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'actu' %}">Actualités</a></li>
+                                        <li><a href="{% url 'zooms' %}">Zooms</a></li>
+                                        <li><a href="{% url 'communiques' %}">Communiqués</a></li>
+                                    </ul>
+                                </li>
+                    
+                                <li class="dropdown"><a href='#'>NOUS JOINDRE</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'contact' %}">Contacts</a></li>
+                                        <li><a href="{% url 'get-faq' %}">Faq</a></li>
+                                       
+                                    </ul>
+                                </li>
+                    
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+    
+                    <!--More Options-->
+                    <div class="more-options">
+    
+                        <!--Search Box
+                        <div class="dropdown dropdown-outer">
+                            <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                            <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                <li class="panel-outer">
+                                    <div class="form-container">
+                                        <form method="post" action="blog-single' %} ">
+                                            <div class="form-group">
+                                                <input type="search" name="field-name" value="" placeholder="Je recherche..." required="">
+                                                <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        -->
+    
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <div class="sticky-header">
+        <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+                <a href="{% url 'index" class="img-responsive" title="meps">
+                    <img src="{% static 'images/logo/Logo-MEPS-180x50-stickyMenu.png' %}" alt="Logo du MEPS" title="meps">
+                </a>
+            </div>
+    
+            <!--Right Col-->
+            <div class="">
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                
+                    <div class="navbar-collapse collapse">
+                        <ul class="navigation clearfix">
+                            <li class=""><a href="{% url 'home' %}">ACCUEIL</a></li>
+                                <li class="dropdown"><a href="#">MEPS</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-ministere/a-propos-du-ministere-de-lEmploi-et-de-la-protection-sociale">Le Ministère</a></li>
+                                        <li class=""><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-cabinet/le-cabinet">Le Cabinet</a> </li>
+                                        <li class=""><a href="{% url 'orga' %}">Organigramme</a></li>
+                                        <li><a href="{% url 'homedirection' %}">Directions & Services Rattachées</a></li>
+                                        <li><a href="{% url 'structures-sous-tutelles' %}">Structures Sous Tutelles</a></li>
+                                        <li><a href="{% url 'ecoles-speciales' %}">Écoles Spécialisées</a></li>
+                                        <li><a href="{% url 'decret-organisation' %}">Décret d'Organisation</a></li>
+                                        <li><a href="{{ 'http://dev-meps-01.eastus.cloudapp.azure.com/detail-mission/missions-et-objectifs' }}">Missions & Objectifs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">DIRECTIONS GÉNÉRALES</a>
+                                    <ul class="dropdown-menu">
+                                        <li class=""><a href="{% url 'homedge' %}">De l'Emploi [DGE]</a></li>
+                                        <li class=""><a href="{% url 'homedgt' %}">Du Travail [DGT]</a></li>
+                                        <li class=""><a href="{% url 'homedgps' %}">De la Protection Sociale [DGPS]</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">REGIMES</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown"><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-produit/couverture-maladie-universelle">CMU</a>
+                                            <ul>
+                                                <li><a href="https://meps.projectperforming.com/detail-produit/liste-des-pieces-a-fournir-cmu">Pièces à fournir</a></li>
+                                                <li><a href="{% url 'centrecmu' %}">Centres d'enrôlement CMU</a></li>
+                                                <li><a href="{% url 'reseauxsoins' %}">Réseaux de soins</a></li>
+                                                <li><a href="{% url 'medicamentscmu' %}">Liste des médicaments</a></li>
+                                            </ul>
+                                        <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+                                        <li><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-produit/la-complementaire">COMPLEMENTAIRE</a></li>
+                                        <li><a href="http://dev-meps-01.eastus.cloudapp.azure.com/detail-produit/regime-social-des-travailleurs-independants">RSTI</a> </li>
+         
+                                    </ul>
+                                </li>
+                                <li class=""><a href="{% url 'documents' %}">DOCUMENTS</a>               
+                                </li>
+                                <li class="dropdown"><a href="">PUBLICATIONS</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'actu' %}">Actualités</a></li>
+                                        <li><a href="{% url 'zooms' %}">Zooms</a></li>
+                                        <li><a href="{% url 'communiques' %}">Communiqués</a></li>
+                                    </ul>
+                                </li>
+                    
+                                <li class="dropdown"><a href='#'>NOUS JOINDRE</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'contact' %}">Contacts</a></li>
+                                        <li><a href="{% url 'get-faq' %}">Faq</a></li>
+                                       
+                                    </ul>
+                                </li>
+                
+                        </ul>
+                    </div>
+                </nav>
+                <!-- End Main Menu -->
+            </div>
+        </div>
+    </div>
+    
+    </header>
+    <!--End Main Header -->

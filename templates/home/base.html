@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEPS</title>
+    <link href="{% static 'home/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'home/plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+    <link href="{% static 'home/plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+    <link href="{% static 'home/plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'home/css/responsive.css' %}" rel="stylesheet">
+
+    <!--Add this Theme Color File To Change Template Color Scheme / Color Scheme Files are Located in root/css/color-themes/ folder-->
+    <!--<link href="{% static 'css/color-themes/blue-theme.css' %}" rel="stylesheet">-->
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'home/images/favicon-meps.jpg' %}"  type="image/x-icon">
+    <link rel="icon" href="{% static 'home/images/favicon-meps.jpg' %}"  type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<body>
+    <div class="page-wrapper">
+        {% include 'home/navbar.html' %}
+        
+        {% block content %} 
+        
+        {% endblock %}
+
+        {% include 'home/footer.html' %}
+
+<!-- FashInfo -->
+
+<script type="text/javascript">
+
+    setInterval(function () {
+         document.getElementById('flashInfoTitle').style.opacity =(document.getElementById('flashInfoTitle').style.opacity == 0 ? 1 : 0);
+         },
+         500);
+ </script>
+ 
+<script src="{% static 'home/js/jquery.js' %}"></script>
+<script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+<!--Revolution Slider-->
+<script src="{% static 'home/plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'home/plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'home/js/main-slider-script.js' %}"></script>
+<!--End Revolution Slider-->
+<script src="{% static 'home/js/jquery-ui.js' %}"></script>
+<script src="{% static 'home/js/jquery.fancybox.pack.js' %}"></script>
+<script src="{% static 'home/js/jquery.fancybox-media.js' %}"></script>
+<script src="{% static 'home/js/owl.js' %}"></script>
+<script src="{% static 'home/js/appear.js' %}"></script>
+<script src="{% static 'home/js/wow.js' %}"></script>
+<script src="{% static 'home/js/main-slider-script.js' %}"></script>
+<script src="{% static 'home/js/script.js' %}"></script>
+
+</body>
+</html>

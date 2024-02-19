@@ -1,0 +1,98 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+    <!--
+     <section class="page-title" style="background-image:url({% static 'home/images/background/6.jpg' %});">
+        <div class="auto-container">
+            <h1>Actualités</h1>
+        </div>
+    </section>
+    -->
+    <!--Page Info
+    <section class="page-info">
+        <div class="auto-container">
+        	<div class="inner-container clearfix">
+            
+                <div class="pull-left">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">Accueil</a></li>
+                        <li>Actualités</li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <div class="share-icon"><a href="#"><span class="icon fa fa-share-alt"></span> Partager</a></div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    -->
+    <!--End Page Info-->
+    
+    <!--Blog Grid Section-->
+    <section class="blog-grid-section">
+    	<div class="auto-container">
+        	
+            <div class="row clearfix">    
+                {% for a in zooms %}
+                    <div class="welcome-block col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{{ a.image.url }}" alt="" height="235px"/>
+                                <div class="overlay-box">
+                                    <!--<div class="post-published-date">15 Juin 2022</div>-->
+                                    <div class="content">
+                                        <div class="content-inner">                                        
+                                            <div class="icon-box">
+                                                <!--<span class="icon flaticon-analytics-1"></span>-->
+                                                
+                                            </div>
+                                            <div class="text" style="margin-left: -80px;">Zooms</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lower-box">
+                                <div class="text">
+
+                                    <h3><a href="{% url 'blog_detail' a.slug %}">{{ a.titre }}</a></h3>
+                                    {{ a.resume }}
+                                </div>
+                                <a href="{% url 'blog_detail' a.slug %}" class="theme-btn btn-style-three">Lire la suite... </a>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+                
+        
+            
+            <!--
+            <div class="pagination-box">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <div class="styled-pagination">
+                            <ul class="clearfix">
+                                <li><a class="prev" href="#"><span class="fa fa-caret-left"></span></a></li>
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a class="next" href="#"><span class="fa fa-caret-right"></span></a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <div class="pages-number">Page 01 of 02</div>
+                    </div>
+                </div>
+            </div>
+            -->
+            
+        </div>
+    </section>
+    
+
+{% endblock %}

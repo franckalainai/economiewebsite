@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c> 
+    SetEnv HTTP_MOD_REWRITE On 
+    RewriteEngine On 
+    RewriteBase / 
+</IfModule> 
+# DO NOT REMOVE. CLOUDLINUX PASSENGER  CONFIGURATION BEGIN 
+PassengerAppRoot "/home/c1705764c/sitemeps" 
+PassengerBaseURI "/" 
+PassengerPython "/home/c1705764c/virtualenv/sitemeps/3.7/bin/python" 
+<IfModule Litespeed>
+</IfModule>

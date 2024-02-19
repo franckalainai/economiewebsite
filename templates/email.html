@@ -1,0 +1,351 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+<!--Page Title-
+<section class="page-title" style="background-image:url({% static 'home/images/background/6.jpg' %});">
+    <div class="auto-container">
+        <h1>Actualité</h1>
+    </div>
+</section>
+->
+
+<!--Page Info-->
+
+<section class="page-info">
+    <div class="auto-container">
+        <div class="inner-container clearfix">
+        
+            <div class="pull-left">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="{% url 'actu' %}">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!--End Page Info-->
+<!--
+<section class="contact-section">
+  <div class="auto-container">
+        <div class="contact-info-tabs">
+            <div class="contact-tabs c-tabs-box">
+                <div class="tabs-content">
+                    <div class="tab active-tab" id="contact-tab-cabinet">
+                        <div class="text">Veuillez trouver ci-dessous les coordonnées de toutes nos directions et services ratachées.</div>
+                        <div class="row clearfix">
+                            <div class="accordian-column col-md-4 col-sm-12 col-xs-12">
+                                <div class="column-inner">
+                                    <ul class="accordion-box style-four">
+                                        <li class="accordion block active-block">
+                                            <div class="acc-btn active">Le Cabinet </div>
+                                            <div class="acc-content current">
+                                                <div class="content">
+                                                    <ul class="info-list">
+                                                        <li><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong>  Abidjan –Plateau,Tour A, cité administrative, Abidjan ,12e Etage.</li>
+                                                        <li><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> +225 27 20 23 92 80</li>
+                                                        <li><span class="icon flaticon-e-mail-envelope"></span><strong> Nous Ecrire :</strong><br> info@emploi.gouv.ci</li>
+                                                        <li><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+             
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-column col-md-8 col-sm-12 col-xs-12">
+
+                                {% include 'accounts/pages/ministere/messages.html' %}
+                                <div class="contact-form ">
+                                    <h2>Veuillez-nous laisser votre message !</h2>
+                                    <form method="post">
+                                      {% csrf_token %}
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                              <label>Email</label>
+                                                {{ form.from_email }}
+                                            </div>
+            
+                                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                              <label>Objet</label>
+                                                {{ form.subject }}
+                                            </div>
+                                            
+                                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                              <label>Votre message</label>
+                                                {{ form.message }}
+                                            </div>
+            
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+                                                <button class="theme-btn btn-style-one" type="submit" name="submit-form">Envoyer</button>
+                                            </div>
+            
+                                        </div>
+                                    </form>
+            
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    
+      
+    </div>
+</section>
+-->
+<section class="services-section">
+    <div class="auto-container">
+        <!--Sec Title-->
+        <div class="sec-title">
+            <h2>Contacts des Différentes Directions</h2>
+        </div>
+        <div class="row clearfix">
+            <!--Services Column-->
+            <div class="services-column col-md-12 col-sm-12 col-xs-12">
+                <div class="inner-content">
+                    <div class="clearfix">
+                        
+                        <!--Services Block Two-->
+                        <div class="row equal-cols">
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DSI</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="services-single.html">DSI</a></h3>
+                                    <div class="title contact-dg-title">Direction des Systèmes d'Informations</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau Cité Administrative, 11ème étage</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> +225 27 22 41 51 38</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DGPS</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="services-single.html">DGPS</a></h3>
+                                    <div class="title contact-dg-title">Direction Générale de la Protection Sociale</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong>  Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> +225 27 20 32 11 32</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong> Nous Ecrire :</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DGE</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DGE</a></h3>
+                                    <div class="title contact-dg-title">Direction Générale de l’Emploi</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong>  Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> +225 27 20 22 58 48 / 27 20 22 58 49</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong> Nous Ecrire :</strong><br> info@direction_emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row  equal-cols">
+
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DRH</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DRH</a></h3>
+                                    <div class="title contact-dg-title">Direction des Ressources Humaines</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau près hôpital des fonctionnaires</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> +225 27 20 35 54 70 / 27 20 21 08 87</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DAFM</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DAFM</a></h3>
+                                    <div class="title contact-dg-title">Direction des Affaires Financières et Matérielles</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> +225 27 20 21 37 34</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!--Services Block Two-->
+                             <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DSSM</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DSSM</a></h3>
+                                    <div class="title contact-dg-title">Direction de la Sécurité Sociale et de la Mutualité</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau </li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br>+225 27 20 32 11 32</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DSPE</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DSPE</a></h3>
+                                    <div class="title contact-dg-title">Direction des Stratégies et des Programmes d’Emploi</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> 27 20 22 58 52 / 27 20 22 58 51</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!--Services Block Two-->
+                             <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DSEPE</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DSEPE</a></h3>
+                                    <div class="title contact-dg-title">Direction du Suivi et Evaluation de la Politique de l’Emploi.</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br>+225 27 20 32 11 32</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DLTE</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DLTE</a></h3>
+                                    <div class="title contact-dg-title">Direction de la Lutte contre le Travail des Enfants</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br>+225 27 22 52 33 82 / 27 22 52 33 83</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div> 
+                        
+                        <div class="row">
+                            
+                             <!--Services Block Two-->
+                             <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DPPH</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DPPH</a></h3>
+                                    <div class="title contact-dg-title">Direction de la Promotion des Personnes Handicapées</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br>+225 27 20 32 57 33</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DAJ</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DAJ</a></h3>
+                                    <div class="title contact-dg-title">Direction des Affaires Juridiques</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> 27 20 22 58 54 / 27 20 22 58 53</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        
+                            <!--Services Block Two-->
+                            <div class="services-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="inner-box">
+                                    <!-- <div class="icon-box contact-iconBox"><span class="">DGT</span></div> -->
+                                    <h3 class="contact-dg-sigle"><a href="">DGT</a></h3>
+                                    <div class="title contact-dg-title">Direction Générale du Travail</div>
+                                    <div class="content grey-bg">
+                                        <ul class="info-list">
+                                            <li class="contact-info-item"><span class="icon flaticon-placeholder-3"></span><strong>Adresse:</strong> Abidjan, Plateau</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-telephone"></span><strong>Appelez-nous:</strong><br> +225 27 20 23 92 77</li>
+                                            <li class="contact-info-item"><span class="icon flaticon-e-mail-envelope"></span><strong>Nous Ecrire:</strong><br> info@emploi.gouv.ci</li>
+                                            <li class="contact-info-item"><span class="icon fa fa-clock-o"></span><strong>Horaire d'ouverture:</strong><br> Lundi - Vendredi: 07h30-16h30 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Services Section-->
+<section class="separator-section"></section>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+    
+    <!--Page Info-->
+    <section class="page-info">
+        <div class="auto-container">
+        	<div class="inner-container clearfix">
+            
+                <div class="pull-left">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="">Accueil</a></li>
+                        <li>Structures sous-tutelles</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--End Page Info-->
+    
+
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+                
+                <!--Content Side / Blog Single-->
+                <div class="content-side col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="blog-single">
+                        <div class="inner-box">
+                            <iframe src="{% static 'home/decret/decret.pdf' %}" height="850px" width="100%"></iframe> 
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Sidebar-->
+                <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <aside class="sidebar">
+                    </aside>
+                </div>
+                
+            </div>
+        </div>
+    </div>  
+    
+{% endblock %}

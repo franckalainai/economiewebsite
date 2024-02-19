@@ -1,0 +1,65 @@
+{% extends 'home/base.html' %}
+    
+{% load static %}
+    
+{% block content %}
+
+<section class="page-title" style="background-image:url({% static 'home/images/background/6.jpg' %});">
+  <div class="auto-container">
+      <h1>Structure sous tutelle</h1>
+  </div>
+</section>
+<!--
+<section class="page-info">
+    <div class="auto-container">
+      <div class="inner-container clearfix">
+        <div class="pull-left">
+          <ul class="bread-crumb clearfix">
+            <li><a href="">Accueil</a></li>
+            <li>missions & Objectifs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+  <!--End Page Info-->
+
+  <!--Sidebar Page Container-->
+  <div class="sidebar-page-container">
+    <div class="auto-container">
+      <div class="row clearfix">
+        <!--Content Side / Blog Single-->
+        <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+          <div class="blog-single">
+            <div class="inner-box">
+              <div class="image">
+                <img src="{{blog_obj.image.url}}" alt="" />
+              </div>
+              <!-- <ul class="post-info">
+                <li>19 Juillet 2022</li>
+                <li>Posté par: Admin</li>
+                <li>Categorie: Cabinet</li>
+              </ul> -->
+              <div class="lower-content">
+
+                <h3>{{blog_obj.titre}}</h3>
+                tutel
+              </div>
+                                        
+            </ul>
+          </div>                     
+        </aside>
+      </div>
+            <br><br>
+            
+        </div>
+      </div>
+
+    </div>
+      <!--Services Block Seven-->                    
+    <!--  <br><br> -->
+  </div>
+
+
+{% endblock %}
